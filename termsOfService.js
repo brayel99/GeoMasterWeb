@@ -40,7 +40,6 @@ function createHeading(parent,type,title){
 function createSection(parent){
     const newSection = document.createElement("section");
     newSection.style.color = "#000";
-   /*  newSection.style.border = "1px solid #000" */
     newSection.style.padding = "1rem";
     newSection.style.display = "flex";
     newSection.style.flexDirection = "column";
