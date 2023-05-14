@@ -1,0 +1,82 @@
+{
+   "Intro":"Welcome to the GeoMaster application  provided by [Your Company Name] . These terms of service govern your use of the App. By accessing or using the App, you agree to be bound by these Terms. If you do not agree to these Terms, you may not use the App.",
+   "Applicable terms and policies":{
+      "Overview":"These terms of service and privacy policy apply to your use of the GeoMaster application.",
+      "Acceptance of terms":"By using the application, you agree to be bound by these terms of service and privacy policy.",
+      "Changes to terms and policies":"We reserve the right to modify these terms of service and privacy policy at any time. Your continued use of the application following any changes constitutes your acceptance of the modified terms."
+   },
+   "Your account":{
+      "Account creation":"In order to use the application, you must create an account with us.",
+      "Account information":"You are responsible for maintaining the accuracy and confidentiality of your account information.",
+      "Account termination":"We reserve the right to terminate or suspend your account at any time for any reason."
+   },
+   "Your content":{
+      "Content ownership":"You retain ownership of any content that you submit or upload to the application.",
+      "Content usage":"By submitting content to the application, you grant us a non-exclusive, royalty-free license to use, modify, and distribute your content as necessary to provide and improve the application.",
+      "Content restrictions":"You are solely responsible for ensuring that any content you submit to the application does not violate any third-party rights, including intellectual property rights."
+   },
+   "Our proprietary rights":{
+      "Application ownership":"We own all rights, title, and interest in and to the application, including all intellectual property rights.",
+      "Application usage":"You may use the application only for its intended purpose and in accordance with these terms of service and applicable laws.",
+      "Application modifications":"You may not modify, distribute, or reverse engineer the application in any way."
+   },
+   "Restrictions":{
+      "Prohibited activities":"You may not use the application for any illegal or unauthorized purpose, or engage in any activity that could harm the application or its users.",
+      "Usage limitations":"We reserve the right to limit or restrict your usage of the application at any time for any reason."
+   },
+   "THIRD PARTY WEBSITE AND CONTENT":{
+      "Third party content":"The application may contain links to third-party websites or content. We are not responsible for the accuracy or legality of such content.",
+      "Third party services":"We may use third-party services to provide certain features of the application. Your use of such services is subject to their terms of service and privacy policies."
+   },
+   "The subscription contract between you and us":{
+      "Subscription options and pricing":"The application may offer subscription options with varying pricing and features.",
+      "Payment terms and methods":"You are responsible for paying all fees associated with your subscription using the payment methods provided.",
+      "Automatic renewal and cancellation policy":"Subscriptions will automatically renew unless you cancel them in accordance with the application's policies.",
+      "Changes to subscription terms":"We reserve the right to modify subscription terms and pricing at any time."
+   },
+   "Indemnification; Hold Harmless":{
+      "Indemnification definition":"You agree to indemnify and hold us harmless from any claims, damages, or expenses arising from your use of the application.",
+      "Our defense rights":"We reserve the right to assume defense and control of any matter subject to indemnification by you.",
+      "Exceptions to indemnification and hold harmless":"We are not responsible for any damages resulting from your violation of these terms of service or applicable laws."
+   },
+   "Disclaimer of Warranties":{
+      "No Warranties":"Geomaster is provided on an 'as is' and 'as available' basis. We make no warranties, express or implied, regarding the use or operation of Geomaster, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.",
+      "Accuracy of Information":"We do not warrant the accuracy, completeness, or usefulness of any information provided through Geomaster.",
+      "Interruptions and Errors":"We do not warrant that Geomaster will be uninterrupted or error-free, or that any errors will be corrected.",
+      "Damage to Device":"We are not responsible for any damage to your device resulting from the use of Geomaster."
+   },
+   "Limitation of Liability; Waiver":{
+      "Limitation of Liability":"In no event shall we be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with your use of Geomaster.",
+      "Waiver of Liability":"You agree to waive any and all claims against us, including but not limited to claims based on warranty, contract, tort, or any other legal theory, arising out of or in connection with your use of Geomaster."
+   },
+   "Notice and Procedure for Making Claims of Copyright Infringement":{
+      "Introduction":"We respect the intellectual property rights of others and require that our users do the same. This section outlines the procedure for submitting a notification of alleged copyright infringement. By using our application, you agree to comply with this policy.",
+      "Notification of Claimed Copyright Infringement":{
+         "If you believe that your work has been used in a way that constitutes copyright infringement, you must provide us with a written notification that includes the following information:":[
+            "A physical or electronic signature of a person authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.",
+            "Identification of the copyrighted work claimed to have been infringed, or, if multiple copyrighted works are covered by a single notification, a representative list of such works.",
+            "Identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be removed or access to which is to be disabled, and information reasonably sufficient to permit us to locate the material.",
+            "Information reasonably sufficient to permit us to contact the complaining party, such as an address, telephone number, and, if available, an electronic mail address at which the complaining party may be contacted.",
+            "A statement that the complaining party has a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law.",
+            "A statement that the information in the notification is accurate, and under penalty of perjury, that the complaining party is authorized to act on behalf of the owner of an exclusive right that is allegedly infringed."
+         ]
+      },
+      "Counter-Notification":{
+         "If you believe that material you posted on the application was removed or access to it was disabled by mistake or misidentification, you may file a counter-notification with us":[
+            "Identification of the material that has been removed or to which access has been disabled and the location at which the material appeared before it was removed or access to it was disabled.",
+            "A statement under penalty of perjury that you have a good faith belief that the material was removed or disabled as a result of mistake or misidentification of the material to be removed or disabled.",
+            "Your name, address, and telephone number.",
+            "A statement that you consent to the jurisdiction of the Federal District Court for the judicial district in which your address is located (or the federal district courts located in the Northern District of California, if your address is outside of the United States), and that you will accept service of process from the person who provided the notification of claimed infringement or an agent of such person.",
+            "A statement that you swear under penalty of perjury that you have a good faith belief that the material was removed or disabled as a result of mistake or misidentification of the material to be removed or disabled."
+         ]
+      },
+      "Repeat Infringers":"We reserve the right to terminate the accounts of users who are repeat infringers of copyrighted material."
+   },
+   "Miscellaneous":{
+      "Entire Agreement":"These Terms of Service and our Privacy Policy constitute the entire agreement between you and us with respect to the Service and supersede all prior or contemporaneous communications and proposals, whether oral or written, between you and us.",
+      "No Waiver":"Our failure to exercise or enforce any right or provision of these Terms of Service shall not constitute a waiver of such right or provision.",
+      "Severability":"If any provision of these Terms of Service is found to be invalid, illegal, or unenforceable, the validity, legality, and enforceability of the remaining provisions shall not in any way be affected or impaired thereby.",
+      "Assignment":"These Terms of Service are personal to you and may not be assigned or transferred by you without our prior written consent. We may assign or transfer these Terms of Service without restriction.",
+      "Survival":"All provisions of these Terms of Service that by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability."
+   }
+}
