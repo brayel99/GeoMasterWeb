@@ -19,7 +19,7 @@ async function fetchJsonData(){
     }
     if (typeof subs == "object"){
         if (isArray(subs)){
-            createunOrderedList(section,subs)
+            createunOrderedList(section,subs);
         }
         else{
             recursHeaders(section,subs,headerType+1);
@@ -53,14 +53,14 @@ function createSection(parent){
 function createunOrderedList(parent,items){
     const newList = document.createElement("ul");
     newList.style.paddingLeft = "5em";
-    var values = Object.values(items)
+    var values = Object.values(items);
     for (let i in values){
         const item = document.createElement("li");
         item.textContent = values[i];
         newList.append(item);
     }
 
-    parent.append(newList)
+    parent.append(newList);
 
 
 }
@@ -71,7 +71,6 @@ function createParagraph(parent,title){
     const newParagraph = document.createElement("p");
     newParagraph.textContent = title;
     newParagraph.style.color = "#000";
-   /*  newParagraph.style.fontSize = "2rem"; */
     newParagraph.style.paddingLeft = "2rem";
     parent.append(newParagraph);
 
@@ -85,7 +84,7 @@ function isArray(myArray) {
 async function setUp(){
     const termsOfServicesObj = await fetchJsonData();
     let display =  document.getElementById("display");
-    display.style.margin = "2px"
+    display.style.margin = "2px";
    display.style.display = "flex";
    display.style.flexDirection = "column";
    display.style.gap = "2rem";
