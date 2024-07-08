@@ -2,21 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Services</title>
-    <link rel="icon" href="/assets/AppIcon.appiconset/Icon20.png" type="image/x-icon"/>
-    <link rel="stylesheet" href="/css/main.css">
-    <script src="/termsOfService.js"></script>
+    <title>Terms of Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #444;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #444;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        footer {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>GeoMaster Terms of Service</h1>
+    </header>
 
-    <main>
-        <div id="display">
+    <div class="container" id="terms-container">
+        <h1>Terms of Service</h1>
+        <p>Loading...</p>
+    </div>
 
-        </div>
-    </main>
-   
-    
+    <footer>
+        <p>&copy; 2024 GeoMaster. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('terms.json')
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('terms-container');
+                    container.innerHTML = '';
+
+                    const intro = document.createElement('p');
+                    intro.textContent = data.Intro;
+                    container.appendChild(intro);
+
+                    const sections = [
+                        'Applicable terms and policies',
+                        'Your account',
+                        'Your content',
+                        'Our proprietary rights',
+                        'Restrictions',
+                        'THIRD PARTY WEBSITE AND CONTENT',
+                        'The subscription contract between you and us',
+                        'Indemnification; Hold Harmless',
+                        'Disclaimer of Warranties',
+                        'Limitation of Liability; Waiver',
+                        'Notice and Procedure for Making Claims of Copyright Infringement',
+                        'Miscellaneous'
+                    ];
+
+                    sections.forEach(section => {
+                        const sectionTitle = document.createElement('h2');
+                        sectionTitle.textContent = section;
+                        container.appendChild(sectionTitle);
+
+                        const subSections = data[section];
+                        for (let subSection in subSections) {
+                            const subSectionTitle = document.createElement('h3');
+                            subSectionTitle.textContent = subSection;
+                            container.appendChild(subSectionTitle);
+
+                            const content = subSections[subSection];
+                            if (Array.isArray(content)) {
+                                const ul = document.createElement('ul');
+                                content.forEach(item => {
+                                    const li = document.createElement('li');
+                                    li.textContent = item;
+                                    ul.appendChild(li);
+                                });
+                                container.appendChild(ul);
+                            } else {
+                                const p = document.createElement('p');
+                                p.textContent = content;
+                                container.appendChild(p);
+                            }
+                        }
+                    });
+                })
+                .catch(error => {
+                    const container = document.getElementById('terms-container');
+                    container.innerHTML = '<p>Error loading terms of service. Please try again later.</p>';
+                });
+        });
+    </script>
 </body>
 </html>
