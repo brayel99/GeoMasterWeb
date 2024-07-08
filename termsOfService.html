@@ -26,7 +26,7 @@
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
+        h1, h2, h3 {
             color: #444;
         }
         p {
@@ -45,12 +45,11 @@
 </head>
 <body>
     <header>
-        <h1>GeoMaster Terms of Service</h1>
+        <h1>Terms of Service</h1>
     </header>
 
     <div class="container" id="terms-container">
-        <h1>Terms of Service</h1>
-        <p>Loading...</p>
+        <h2>Loading...</h2>
     </div>
 
     <footer>
@@ -58,64 +57,87 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener("DOMContentLoaded", function() {
             fetch('TermsOfServices.json')
                 .then(response => response.json())
                 .then(data => {
                     const container = document.getElementById('terms-container');
-                    container.innerHTML = '';
+                    container.innerHTML = ''; // Clear the loading text
 
-                    const intro = document.createElement('p');
+                    // Intro
+                    let intro = document.createElement('p');
                     intro.textContent = data.Intro;
                     container.appendChild(intro);
 
-                    const sections = [
-                        'Applicable terms and policies',
-                        'Your account',
-                        'Your content',
-                        'Our proprietary rights',
-                        'Restrictions',
-                        'THIRD PARTY WEBSITE AND CONTENT',
-                        'The subscription contract between you and us',
-                        'Indemnification; Hold Harmless',
-                        'Disclaimer of Warranties',
-                        'Limitation of Liability; Waiver',
-                        'Notice and Procedure for Making Claims of Copyright Infringement',
-                        'Miscellaneous'
-                    ];
+                    // Applicable terms and policies
+                    createSection(container, "Applicable terms and policies", data["Applicable terms and policies"]);
+                    
+                    // Your account
+                    createSection(container, "Your account", data["Your account"]);
 
-                    sections.forEach(section => {
-                        const sectionTitle = document.createElement('h2');
-                        sectionTitle.textContent = section;
-                        container.appendChild(sectionTitle);
+                    // Your content
+                    createSection(container, "Your content", data["Your content"]);
 
-                        const subSections = data[section];
-                        for (let subSection in subSections) {
-                            const subSectionTitle = document.createElement('h3');
-                            subSectionTitle.textContent = subSection;
-                            container.appendChild(subSectionTitle);
+                    // Our proprietary rights
+                    createSection(container, "Our proprietary rights", data["Our proprietary rights"]);
 
-                            const content = subSections[subSection];
-                            if (Array.isArray(content)) {
-                                const ul = document.createElement('ul');
-                                content.forEach(item => {
-                                    const li = document.createElement('li');
-                                    li.textContent = item;
-                                    ul.appendChild(li);
-                                });
-                                container.appendChild(ul);
-                            } else {
-                                const p = document.createElement('p');
-                                p.textContent = content;
-                                container.appendChild(p);
-                            }
-                        }
-                    });
+                    // Restrictions
+                    createSection(container, "Restrictions", data["Restrictions"]);
+
+                    // THIRD PARTY WEBSITE AND CONTENT
+                    createSection(container, "THIRD PARTY WEBSITE AND CONTENT", data["THIRD PARTY WEBSITE AND CONTENT"]);
+
+                    // The subscription contract between you and us
+                    createSection(container, "The subscription contract between you and us", data["The subscription contract between you and us"]);
+
+                    // Indemnification; Hold Harmless
+                    createSection(container, "Indemnification; Hold Harmless", data["Indemnification; Hold Harmless"]);
+
+                    // Disclaimer of Warranties
+                    createSection(container, "Disclaimer of Warranties", data["Disclaimer of Warranties"]);
+
+                    // Limitation of Liability; Waiver
+                    createSection(container, "Limitation of Liability; Waiver", data["Limitation of Liability; Waiver"]);
+
+                    // Notice and Procedure for Making Claims of Copyright Infringement
+                    createSection(container, "Notice and Procedure for Making Claims of Copyright Infringement", data["Notice and Procedure for Making Claims of Copyright Infringement"], true);
+
+                    // Miscellaneous
+                    createSection(container, "Miscellaneous", data["Miscellaneous"]);
                 })
                 .catch(error => {
+                    console.error('Error fetching terms:', error);
                     const container = document.getElementById('terms-container');
-                    container.innerHTML = '<p>Error loading terms of service. Please try again later.</p>';
+                    container.innerHTML = '<p>Failed to load terms of service. Please try again later.</p>';
                 });
+
+            function createSection(container, title, content, isNested = false) {
+                let sectionTitle = document.createElement('h2');
+                sectionTitle.textContent = title;
+                container.appendChild(sectionTitle);
+
+                if (typeof content === 'object' && !Array.isArray(content)) {
+                    for (const [key, value] of Object.entries(content)) {
+                        let subSectionTitle = document.createElement(isNested ? 'h4' : 'h3');
+                        subSectionTitle.textContent = key;
+                        container.appendChild(subSectionTitle);
+
+                        if (typeof value === 'string') {
+                            let text = document.createElement('p');
+                            text.textContent = value;
+                            container.appendChild(text);
+                        } else if (Array.isArray(value)) {
+                            let list = document.createElement('ul');
+                            value.forEach(item => {
+                                let listItem = document.createElement('li');
+                                listItem.textContent = item;
+                                list.appendChild(listItem);
+                            });
+                            container.appendChild(list);
+                        }
+                    }
+                }
+            }
         });
     </script>
 </body>
